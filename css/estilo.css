@@ -1,0 +1,529 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 65,2%;
+}
+
+
+
+/*-------------------- ESTRUCTURA GRID HTML INDEX: INICIO --------------------*/
+.grid-container {
+    display: grid;
+    grid-template-areas: 
+    "header header header header header header header header header header header header"
+    "intro intro intro intro intro intro logo logo logo logo logo logo"
+    "sobre-mi sobre-mi sobre-mi sobre-mi sobre-mi sobre-mi sobre-mi sobre-mi sobre-mi sobre-mi sobre-mi sobre-mi"
+    "imagenes imagenes imagenes imagenes imagenes imagenes imagenes imagenes imagenes imagenes imagenes imagenes"
+    "footer footer footer footer footer footer footer footer footer footer footer footer";
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    row-gap: 125px;
+    column-gap: 100px;
+    height: 100vh;
+}
+
+header {
+    grid-area: header;
+}
+
+.intro {
+    grid-area: intro;
+    text-align: center;
+    margin: auto;
+}
+
+.logo {
+    grid-area: logo;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.sobre-mi {
+    grid-area: sobre-mi;
+    text-align: center;
+    margin: auto;
+}
+
+.imagenes {
+    grid-area: imagenes;
+}
+
+footer {
+    grid-area: footer;
+}
+
+
+
+/*-------------------- MEDIA QUERIES HTML INDEX: INICIO --------------------*/
+@media only screen and (max-width: 768px) {
+    .grid-container {
+      display: grid;
+      grid-template-areas: 
+      "header header header"
+      "intro intro intro"
+      "logo logo logo"
+      "sobre-mi sobre-mi sobre-mi"
+      "imagenes imagenes imagenes"
+      "footer footer footer";
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(6, 1fr);
+      width: 100%;
+    }
+  
+    .logo {
+        width: auto;
+        display: flex;
+        flex-direction: column;
+        justify-items: flex-start;
+    }
+
+    .intro {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    .intro h1 {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (min-width:769px) and (max-width:1024px) {
+    .grid-container {
+    display: grid;
+    grid-template-areas: 
+    "header header header header header header header header"
+    "intro intro intro intro intro intro intro intro"
+    "logo logo logo logo logo logo logo logo"
+    "sobre-mi sobre-mi sobre-mi sobre-mi sobre-mi sobre-mi sobre-mi sobre-mi"
+    "imagenes imagenes imagenes imagenes imagenes imagenes imagenes imagenes"
+    "footer footer footer footer footer footer footer footer";
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    width: 100%;
+    }
+    
+    .logo {
+        width: auto;
+        display: flex;
+        flex-direction: column;
+        justify-items: flex-start;
+      }
+  
+    .intro {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+}
+
+
+/*-------------------- TITULOS --------------------*/
+.intro h1 {
+    text-align: center;
+    font-size: 4rem;
+    color: rgb(230, 151, 164);
+}
+
+.beneficios h1 {
+    text-align: center;
+    font-size: 3rem;
+    padding: 15px;
+    color: rgb(194, 104, 104);
+    margin-top: 30px;
+}
+
+h2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-size: 2rem;
+    color: rgb(166, 119, 219);
+}
+
+.cuerpo {
+    font-size: 1.2rem;
+}
+
+.mente {
+    font-size: 1.2rem;
+}
+
+.estilos h1 {
+    text-align: center;
+    font-size: 3rem;
+    padding: 5px;
+    color: rgb(194, 104, 104);
+}
+
+.consultas h1 {
+    text-align: center;
+    font-size: 3rem;
+    margin-top: 25px;
+    color: rgb(194, 104, 104);
+}
+
+
+/*-------------------- TEXTOS --------------------*/
+p {
+    font-size: 1.2rem;
+    font-family:"Gudea", serif;
+    padding: 15px;
+} 
+
+.beneficios p {
+    text-align: center;
+    font-size: 1.2rem;
+    
+}
+
+.estilos p {
+    text-align:center;
+    font-size: 1.2rem;
+}
+
+.consultas p {
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.ubicacion p {
+    font-size: 1.5rem;
+}
+
+.sobre-mi p {
+    font-size: 1.2rem;
+}
+
+/*-------------------- IMAGENES --------------------*/
+.imagenes {
+    padding: 15px;
+}
+
+
+
+/*-------------------- ESTRUCTURA GRID HTML: BENEFICIOS --------------------*/
+.grid-container2 {
+    display: grid;
+    grid-template-areas:
+    "header header header header header header header header header header header header"
+    "beneficios beneficios beneficios beneficios beneficios beneficios beneficios beneficios beneficios beneficios beneficios beneficios"
+    "yoga yoga yoga yoga yoga yoga yoga yoga yoga yoga yoga yoga"
+    "cuerpo cuerpo cuerpo cuerpo cuerpo cuerpo cuerpo cuerpo cuerpo cuerpo cuerpo cuerpo"
+    "mente mente mente mente mente mente mente mente mente mente mente mente"
+    "footer footer footer footer footer footer footer footer footer footer footer footer";
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(6, auto);
+    row-gap: 50px;
+    column-gap: 100px;
+    height: 100vh
+}
+
+header {
+    grid-area: header;
+}
+
+.beneficios {
+    grid-area: beneficios;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.yoga {
+    grid-area: yoga;
+}
+
+.cuerpo {
+    grid-area: cuerpo;
+    font-size: 1.2rem;
+}
+
+.mente {
+    grid-area: mente;
+    font-size: 1.2rem;
+}
+
+footer {
+    grid-area: footer;
+}
+
+
+/*-------------------- MEDIA QUERIES HTML: BENEFICIOS --------------------*/
+@media only screen and (max-width: 768px) {
+    .grid-container2 {
+        display: grid;
+        grid-template-areas:
+        "header header header "
+        "beneficios beneficios beneficios"
+        "yoga yoga yoga yoga"
+        "cuerpo cuerpo cuerpo"
+        "mente mente mente"
+        "footer footer footer";
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(6, auto);
+        column-gap: normal;
+        width: 100%;
+    }
+}
+
+
+@media screen and (min-width:769px) and (max-width:1024px) {
+    .grid-container2 {
+        display: grid;
+        grid-template-areas:
+        "header header header header header header"
+        "beneficios beneficios beneficios beneficios beneficios beneficios"
+        "yoga yoga yoga yoga yoga yoga"
+        "cuerpo cuerpo cuerpo cuerpo cuerpo cuerpo"
+        "mente mente mente mente mente mente"
+        "footer footer footer footer footer footer";
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: repeat(6, auto);
+        column-gap: normal;
+        width: 100%;
+    }
+}
+
+
+
+
+/*------------------- ESTRUCTURA GRID HTML ESTILOS ------------------*/
+.grid-container3 {
+    display: grid;
+    grid-template-areas: 
+    "header header header header header header header header header header header header"
+    "estilos estilos estilos estilos estilos estilos estilos estilos estilos estilos estilos estilos"
+    "clases clases clases clases clases clases clases clases clases clases clases clases"
+    "footer footer footer footer footer footer footer footer footer footer footer footer";
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(4, auto);
+    row-gap: auto;
+    column-gap: 10px;
+    
+}
+  
+.header {
+    grid-area: header;
+}
+  
+  
+.estilos {
+    grid-area: estilos;
+}
+  
+.clases {
+    grid-area: clases;
+}
+
+footer {
+    grid-area: footer;
+}
+
+
+.estilos-titulo {
+    margin-top: 80px;
+}
+
+
+
+/*-------------------- MEDIA QUERIES HTML: ESTILOS -------------------*/
+@media only screen and (max-width: 768px) {
+    .grid-container3 {
+        display: grid;
+        grid-template-areas: 
+        "header header header"
+        "estilos estilos estilos"
+        "clases clases clases"
+        "footer footer footer";
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(4, auto);
+        row-gap: auto;
+        column-gap: 10px;
+        
+    }
+}
+
+
+@media screen and (min-width:769px) and (max-width:1024px) {
+    .grid-container3 {
+        display: grid;
+        grid-template-areas: 
+        "header header header header header header header header"
+        "estilos estilos estilos estilos estilos estilos estilos estilos"
+        "clases clases clases clases clases clases clases clases"
+        "footer footer footer footer footer footer footer footer";
+        grid-template-columns: repeat(8, 1fr);
+        grid-template-rows: repeat(4, auto);
+        row-gap: auto;
+        column-gap: auto;
+        
+    }
+}
+
+
+
+
+/*-------------------- ESTRUCTURA GRID HTML: HORARIOS------------------*/
+.grid-container4 {
+    display: grid;
+    grid-template-areas: 
+    "header header header header header header header header header header header header"
+    "horarios horarios horarios horarios horarios horarios horarios horarios horarios horarios horarios horarios"
+    "table table table table table table table table table table table table"
+    "footer footer footer footer footer footer footer footer footer footer footer footer";
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(4, auto);
+    row-gap: 100px;
+    column-gap: 100px;
+    height: 100vh;
+}
+
+header {
+    grid-area: header;
+}
+
+.horarios {
+    grid-area: horarios;
+}
+
+footer {
+    grid-area: footer;
+}
+
+.table {
+    margin-top: 10%;
+    text-align: center;
+    font-size: 1.5rem;
+
+}
+
+
+
+/*--------------------MEDIA QUERIES HTML: HORARIOS --------------------*/
+@media only screen and (max-width: 768px) {
+    .grid-container4 {
+        display: grid;
+        grid-template-areas: 
+        "header header header header"
+        "horarios horarios horarios horarios"
+        "table table table table"
+        "footer footer footer footer";
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(4, auto);
+        row-gap: auto;
+        column-gap: auto;
+        height: 100vh;
+    }
+
+    .horarios {
+        overflow-x: auto;
+    
+    }
+}
+
+
+
+/*------------------- ESTRUCTURA GRID HTML: CONTACTO-------------------*/
+.grid-container5 {
+    display: grid;
+    grid-template-areas:
+    "header header header header header header header header header header header header"
+    "consultas consultas consultas consultas consultas consultas consultas consultas consultas consultas consultas consultas"
+    "formulario formulario formulario formulario formulario formulario formulario formulario formulario formulario formulario formulario"
+    "ubicacion ubicacion ubicacion ubicacion ubicacion ubicacion ubicacion ubicacion ubicacion ubicacion ubicacion ubicacion"
+    "footer footer footer footer footer footer footer footer footer footer footer footer";
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(5, auto);
+    row-gap: 25px;
+    column-gap: 100px;
+    height: 100vh;
+}
+
+header {
+    grid-area: header;
+}
+
+.consultas {
+    grid-area: consultas;
+    margin-top: 5%;
+    padding: 10px;
+}
+
+.formulario {
+    grid-area: formulario;
+}
+
+.ubicacion {
+    grid-area: ubicacion;
+}
+
+footer {
+    grid-area: footer;
+}
+
+
+/*-------------------- MEDIA QUERIES HTML: CONTACTO ------------------*/
+@media only screen and (max-width: 768px) {
+    .grid-container5 {
+        display: grid;
+        grid-template-areas:
+        "header header header"
+        "consultas consultas consultas"
+        "formulario formulario formulario"
+        "ubicacion ubicacion ubicacion"
+        "footer footer footer";
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(5, auto);
+        row-gap: auto;
+        column-gap: auto;
+        height: 100vh;
+    }
+
+    .consultas h1 {
+        padding: 10px;
+    }
+}
+
+@media screen and (min-width:769px) and (max-width:1024px) {
+    .grid-container5 {
+        display: grid;
+        grid-template-areas:
+        "header header header header header header header header"
+        "consultas consultas consultas consultas consultas consultas consultas consultas"
+        "formulario formulario formulario formulario formulario formulario formulario formulario"
+        "ubicacion ubicacion ubicacion ubicacion ubicacion ubicacion ubicacion ubicacion"
+        "footer footer footer footer footer footer footer footer";
+        grid-template-columns: repeat(8, 1fr);
+        grid-template-rows: repeat(5, auto);
+        row-gap: auto;
+        column-gap: auto;
+        height: 100vh;
+    }
+}
+
+
+
+/*-------------------- CONTACTO --------------------*/
+.formulario {
+    margin: 20px;
+}
+
+.ubicacion p {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.mapa {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
